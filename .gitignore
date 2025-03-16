@@ -13,3 +13,12 @@ backend/yarn-error.log
 # Ignore Docker build files
 *.log
 docker-compose.override.yml
+
+
+# Ignore node_modules in backend and frontend
+
+frontend/node_modules
+
+# Ignore environment files
+
+frontend/.env.local
