@@ -1,6 +1,9 @@
 "use client";
 import BrandsAvaliable from "@/components/BrandsAvaliable";
 import HeroSlider from "@/components/HeroSlider";
+import BestSeller from "@/components/Product-sections/best-seller";
+import DealsOfTheDay from "@/components/Product-sections/deals-of-the-day";
+import TopUnder30k from "@/components/Product-sections/top-under-30k";
 import ProductCards from "@/components/ProductBanner";
 import { useEffect, useState } from "react";
 
@@ -20,6 +23,9 @@ export default function Home() {
         <HeroSlider />
         <BrandsAvaliable />
         <ProductCards />
+        <BestSeller />
+        <DealsOfTheDay />
+        <TopUnder30k />
 
         {/* Your other content goes here */}
         <section className="container mx-auto py-12 px-4">
