@@ -1,4 +1,5 @@
 "use client";
+import HeroSlider from "@/components/HeroSlider";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -13,7 +14,18 @@ export default function Home() {
 
   return (
     <div>
+      <main className="min-h-screen">
+        <HeroSlider />
+
+        {/* Your other content goes here */}
+        <section className="container mx-auto py-12 px-4">
+          <h2 className="text-2xl font-bold mb-6">Featured Products</h2>
+          {/* Featured products content */}
+        </section>
+      </main>
+
       <h1>All Products</h1>
+
       <ul>
         {products.map((product) => (
           <li key={product.id}>
