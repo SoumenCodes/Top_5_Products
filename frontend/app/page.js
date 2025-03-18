@@ -1,5 +1,7 @@
 "use client";
+import BrandsAvaliable from "@/components/BrandsAvaliable";
 import HeroSlider from "@/components/HeroSlider";
+import ProductCards from "@/components/ProductBanner";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -16,6 +18,8 @@ export default function Home() {
     <div>
       <main className="min-h-screen">
         <HeroSlider />
+        <BrandsAvaliable />
+        <ProductCards />
 
         {/* Your other content goes here */}
         <section className="container mx-auto py-12 px-4">

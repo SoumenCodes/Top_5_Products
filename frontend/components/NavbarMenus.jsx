@@ -55,7 +55,7 @@ const components = [
 
 export function NavigationMenuBar() {
   return (
-    <div className="bg-bglight flex items-center justify-between rounded-lg p-2">
+    <div className="bg-bglight flex items-center justify-between rounded-lg p-2 container mx-auto">
       <div className="w-3/10 bg-accent p-2 rounded-md font-semibold">
         SHOP HERE BETTER
       </div>
