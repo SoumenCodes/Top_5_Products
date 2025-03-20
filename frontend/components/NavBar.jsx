@@ -77,28 +77,40 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-2">
             <Headphones className="h-8 w-8 text-white" />
             <div>
-              <div className="text-sm font-medium">(+001) 123-456-7890</div>
-              <div className="text-xs text-gray-300">sales@yourcompany.com</div>
+              <div className="text-sm font-medium">(+91) 9113303849</div>
+              <div className="text-xs text-gray-300 font-thin">
+                soumen19j@gmail.com
+              </div>
             </div>
           </div>
 
           {/* User Account */}
           <Link
             href="/account"
-            className="hidden sm:flex items-center justify-center"
+            className="hidden sm:flex items-center justify-center gap-2"
           >
             <User className="h-6 w-6 text-white" />
+            <div>
+              <div className="text-sm font-medium">My Account</div>
+              <div className="text-xs text-gray-300 font-thin">User</div>
+            </div>
           </Link>
 
           {/* Shopping Cart */}
           <Link
             href="/cart"
-            className="relative flex items-center justify-center"
+            className="relative flex items-center justify-center gap-4"
           >
-            <ShoppingBag className="h-6 w-6 text-white" />
-            <span className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-[#6366f1] text-xs font-bold">
-              0
-            </span>
+            <div className="relative">
+              <ShoppingBag className="h-6 w-6 text-white" />
+              <span className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-[#6366f1] text-xs font-bold">
+                0
+              </span>
+            </div>
+            <div>
+              <div className="text-sm font-medium">My Account</div>
+              <div className="text-xs text-gray-300 font-thin">Rs 00.0</div>
+            </div>
           </Link>
         </div>
       </div>
