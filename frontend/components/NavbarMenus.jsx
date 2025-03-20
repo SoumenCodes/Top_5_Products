@@ -64,7 +64,7 @@ export function NavigationMenuBar() {
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuTrigger className="text-md">
-                Getting started
+                Start Shopping
               </NavigationMenuTrigger>
               <NavigationMenuContent className="bg-bgBlue">
                 <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
@@ -86,7 +86,10 @@ export function NavigationMenuBar() {
                       </a>
                     </NavigationMenuLink>
                   </li>
-                  <ListItem href="/docs" title="Introduction">
+                  <ListItem
+                    href="/Smartphone30k"
+                    title="Smartphones ( Under 30k )"
+                  >
                     Re-usable components built using Radix UI and Tailwind CSS.
                   </ListItem>
                   <ListItem href="/docs/installation" title="Installation">

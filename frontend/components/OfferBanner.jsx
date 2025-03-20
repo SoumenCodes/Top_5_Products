@@ -2,7 +2,7 @@ import React from "react";
 
 function OfferBanner() {
   return (
-    <div className="text-base text-center text-white py-3">
+    <div className="text-base text-center text-white py-3 uppercase">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
       laborum repellat est.
     </div>
