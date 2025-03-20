@@ -69,7 +69,7 @@ export function NavigationMenuBar() {
               <NavigationMenuContent className="bg-bgBlue">
                 <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                   <li className="row-span-3">
-                    <NavigationMenuLink asChild>
+                    <NavigationMenuLink asChild className="!rounded-lg">
                       <a
                         className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                         href="/"
@@ -89,15 +89,21 @@ export function NavigationMenuBar() {
                   <ListItem
                     href="/Smartphone30k"
                     title="Smartphones ( Under 30k )"
+                    className="!rounded-lg"
                   >
                     Re-usable components built using Radix UI and Tailwind CSS.
                   </ListItem>
-                  <ListItem href="/docs/installation" title="Installation">
+                  <ListItem
+                    href="/docs/installation"
+                    title="Installation"
+                    className="!rounded-lg"
+                  >
                     How to install dependencies and structure your app.
                   </ListItem>
                   <ListItem
                     href="/docs/primitives/typography"
                     title="Typography"
+                    className="!rounded-lg"
                   >
                     Styles for headings, paragraphs, lists...etc
                   </ListItem>
@@ -106,7 +112,7 @@ export function NavigationMenuBar() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger className="text-md">
-                Components
+                Reach us
               </NavigationMenuTrigger>
               <NavigationMenuContent className="bg-bgBlue">
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
@@ -125,7 +131,7 @@ export function NavigationMenuBar() {
             <NavigationMenuItem>
               <Link href="/docs" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Documentation
+                  About Us
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
