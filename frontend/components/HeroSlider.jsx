@@ -134,34 +134,17 @@ export default function HeroSlider() {
             {/* Content Overlay */}
             <div className="relative z-10 w-full h-full flex items-center">
               <div className="container mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center justify-between">
-                {/* Right side - Content */}
-                <div className="md:w-1/2 text-left space-y-4 bg-background/10 backdrop-blur-sm p-6 rounded-lg">
-                  {slide.badge && (
-                    <span className="inline-block bg-primary text-primary-foreground px-1 py-1 rounded-md text-sm font-medium">
-                      {slide.badge}
-                    </span>
-                  )}
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-                    {slide.title}
-                  </h2>
-                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
-                    {slide.subtitle}
-                  </h3>
-                  <p className="text-lg md:text-xl text-white">
-                    FROM rs
-                    <span className="text-2xl md:text-3xl font-bold">
-                      {slide.price}
-                    </span>
-                  </p>
-                  <Link
-                    href={slide.buttonLink}
-                    className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground  py-3 rounded-md font-medium transition-colors"
-                  >
-                    {slide.buttonText}
-                  </Link>
-                </div>
-                {/* Left side - can be empty for image focus */}
-                <div className="md:w-1/2"></div>
+                {/* Left Section */}
+                {activeIndex === 1 && <div className="md:w-1/2"></div>}
+                {activeIndex === 0 && (
+                  <ContentBlock slide={slide} alignment="left" />
+                )}
+
+                {/* Right Section */}
+                {activeIndex === 0 && <div className="md:w-1/2"></div>}
+                {activeIndex === 1 && (
+                  <ContentBlock slide={slide} alignment="right" />
+                )}
               </div>
             </div>
           </div>
@@ -229,3 +212,33 @@ export default function HeroSlider() {
     </div>
   );
 }
+
+const ContentBlock = ({ slide, alignment }) => (
+  <div
+    className={`md:w-1/2 space-y-4 bg-background/10 backdrop-blur-sm p-6 rounded-lg ${
+      alignment === "right" ? "text-right" : "text-left"
+    }`}
+  >
+    {slide.badge && (
+      <span className="inline-block bg-primary text-primary-foreground px-1 py-1 rounded-md text-sm font-medium">
+        {slide.badge}
+      </span>
+    )}
+    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+      {slide.title}
+    </h2>
+    <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
+      {slide.subtitle}
+    </h3>
+    <p className="text-lg md:text-xl text-white">
+      FROM Rs{" "}
+      <span className="text-2xl md:text-3xl font-bold">{slide.price}</span>
+    </p>
+    <Link
+      href={slide.buttonLink}
+      className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground py-3 rounded-md font-medium transition-colors"
+    >
+      {slide.buttonText}
+    </Link>
+  </div>
+);
