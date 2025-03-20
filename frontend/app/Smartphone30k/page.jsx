@@ -395,13 +395,13 @@ export default function Page() {
               ))}
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
               {products.map((product) => (
                 <div
                   key={product.id}
-                  className="bg-[#0f0f2b] rounded-lg overflow-hidden border border-[#1a1a3a] hover:border-[#4c5af7] transition-colors flex flex-col"
+                  className="bg-[#0f0f2b] rounded-lg overflow-hidden border border-[#1a1a3a] hover:border-[#4c5af7] transition-colors flex flex-col h-full"
                 >
-                  <div className="p-4 bg-[#0a0a20] relative">
+                  <div className="p-3 bg-[#0a0a20] relative">
                     <div className="absolute top-2 left-2 bg-[#4c5af7] text-white text-xs px-2 py-1 rounded-full flex items-center gap-1">
                       <Award className="h-3 w-3" />
                       <span>#{product.rank}</span>
