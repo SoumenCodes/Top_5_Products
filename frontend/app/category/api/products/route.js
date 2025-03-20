@@ -1,9 +1,9 @@
-import { NextResponse } from "next/server"
+import { NextResponse } from "next/server";
 
 // This is a mock API route that would typically fetch data from a database or external API
 export async function GET() {
   // Simulating a delay to mimic real API behavior
-  await new Promise((resolve) => setTimeout(resolve, 800))
+  await new Promise((resolve) => setTimeout(resolve, 800));
 
   const topPhones = [
     {
@@ -32,7 +32,12 @@ export async function GET() {
       reviews: 218,
       image: "/placeholder.svg?height=200&width=200",
       rank: 2,
-      specs: ["Dimensity 8200", "8GB RAM", "256GB Storage", '6.67" AMOLED Display'],
+      specs: [
+        "Dimensity 8200",
+        "8GB RAM",
+        "256GB Storage",
+        '6.67" AMOLED Display',
+      ],
       camera: "108MP + 8MP + 2MP",
       battery: "5000mAh, 120W Fast Charging",
       processor: "Dimensity 8200",
@@ -48,7 +53,12 @@ export async function GET() {
       reviews: 176,
       image: "/placeholder.svg?height=200&width=200",
       rank: 3,
-      specs: ["Dimensity 9000", "8GB RAM", "128GB Storage", '6.74" AMOLED Display'],
+      specs: [
+        "Dimensity 9000",
+        "8GB RAM",
+        "128GB Storage",
+        '6.74" AMOLED Display',
+      ],
       camera: "50MP + 8MP + 2MP",
       battery: "5000mAh, 80W Fast Charging",
       processor: "Dimensity 9000",
@@ -64,7 +74,12 @@ export async function GET() {
       reviews: 145,
       image: "/placeholder.svg?height=200&width=200",
       rank: 4,
-      specs: ["Dimensity 8020", "8GB RAM", "256GB Storage", '6.55" pOLED Display'],
+      specs: [
+        "Dimensity 8020",
+        "8GB RAM",
+        "256GB Storage",
+        '6.55" pOLED Display',
+      ],
       camera: "50MP + 13MP",
       battery: "4400mAh, 68W Fast Charging",
       processor: "Dimensity 8020",
@@ -80,14 +95,18 @@ export async function GET() {
       reviews: 154,
       image: "/placeholder.svg?height=200&width=200",
       rank: 5,
-      specs: ["Snapdragon 8+ Gen 1", "8GB RAM", "128GB Storage", '6.78" AMOLED Display'],
+      specs: [
+        "Snapdragon 8+ Gen 1",
+        "8GB RAM",
+        "128GB Storage",
+        '6.78" AMOLED Display',
+      ],
       camera: "64MP + 8MP + 2MP",
       battery: "5000mAh, 120W Fast Charging",
       processor: "Snapdragon 8+ Gen 1",
       display: '6.78" AMOLED, 120Hz',
     },
-  ]
+  ];
 
-  return NextResponse.json(topPhones)
+  return NextResponse.json(topPhones);
 }
-

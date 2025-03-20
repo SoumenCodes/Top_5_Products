@@ -18,6 +18,7 @@ module.exports = {
         background: "#171744", // Light gray
         textPrimary: "#111827", // Dark gray
         textSecondary: "#6B7280", // Medium gray
+        btnBlue: "#4c5af7",
       },
     },
   },
