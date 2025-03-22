@@ -101,6 +101,70 @@ app.post("/addphonesunder30k", async (req, res) => {
   }
 });
 
+app.post("/addphonesunder20k", async (req, res) => {
+  try {
+    const {
+      brand,
+      name,
+      price,
+      release_date,
+      images_url,
+      originalprice,
+      rating,
+      reviews,
+      image,
+      rank,
+      specs,
+      camera,
+      battery,
+      processor,
+      display,
+    } = req.body;
+
+    if (!brand || !name || !price) {
+      return res.status(400).json({ error: "All the fields are required" });
+    }
+    const result = await pool.query(
+      `INSERT INTO phonesunder20k(brand,
+      name,
+      price,
+      release_date,
+      images_url,
+      originalprice,
+      rating,
+      reviews,
+      image,
+      rank,
+      specs,
+      camera,
+      battery,
+      processor,
+      display) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15) RETURNING*`,
+      [
+        brand,
+        name,
+        price,
+        release_date,
+        images_url,
+        originalprice,
+        rating,
+        reviews,
+        image,
+        rank,
+        specs,
+        camera,
+        battery,
+        processor,
+        display,
+      ]
+    );
+    res.status(201).json(result.rows[0]);
+  } catch (error) {
+    console.error("❌ Error inserting data in under 20 k:", error);
+    res.status(500).json({ success: false, message: "Internal Server Error" });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
